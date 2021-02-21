@@ -42,7 +42,7 @@ namespace Common.Tracing.Jaeger
                     .WithReporter(reporterConfiguration)
                     .GetTracer();
 
-				GlobalTracer.Register(tracer);
+		GlobalTracer.Register(tracer);
 
                 return tracer;
             });
