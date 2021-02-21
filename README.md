@@ -16,7 +16,7 @@ Exemplo de tracing distribuído utilizando Jaeger com ASP.NET Core e .NET 5.0.
 
 ## Excutando
 
-Para subir todos os containers das aplicações e os serviços do Jaeger, basta executar a seguinte instrução no prompt de comando:
+Para subir os containers das aplicações e dos serviços do Jaeger, basta executar o seguinte comando:
 
 ```bash
 $ docker-compose up
