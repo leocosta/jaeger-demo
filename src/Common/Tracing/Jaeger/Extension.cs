@@ -20,9 +20,9 @@ namespace Common.Tracing.Jaeger
             {
                 var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
 
-			    var senderConfig = new SenderConfiguration(loggerFactory)
-				    .WithAgentHost(Environment.GetEnvironmentVariable("JAEGER_AGENT_HOST"))
-				    .WithAgentPort(Convert.ToInt32(Environment.GetEnvironmentVariable("JAEGER_AGENT_PORT")));
+		var senderConfig = new SenderConfiguration(loggerFactory)
+		    .WithAgentHost(Environment.GetEnvironmentVariable("JAEGER_AGENT_HOST"))
+		    .WithAgentPort(Convert.ToInt32(Environment.GetEnvironmentVariable("JAEGER_AGENT_PORT")));
 
                 SenderConfiguration.DefaultSenderResolver = new SenderResolver(loggerFactory)
                     .RegisterSenderFactory<ThriftSenderFactory>();
